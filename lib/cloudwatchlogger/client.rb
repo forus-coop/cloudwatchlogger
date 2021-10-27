@@ -44,8 +44,7 @@ module CloudWatchLogger
                                        :progname => progname,
                                        :pid      => processid }))
           else
-            message = "#{datetime} "
-            message << massage_message(msg, severity, processid)
+            message = msg
           end
         end
       end
