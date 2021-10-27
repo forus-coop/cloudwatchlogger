@@ -42,14 +42,11 @@ module CloudWatchLogger
                                      progname: progname,
                                      pid: processid))
           else
-            message = "#{datetime} "
-            message << massage_message(msg, severity, processid)
+            message = msg
           end
 
-          {
-            message:    message,
-            epoch_time: epoch_from(datetime)
-          }
+          message
+
         end
       end
 
